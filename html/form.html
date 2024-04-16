@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dang ky tu van</title>
+
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../css/navigtor.css" />
+    <link rel="stylesheet" href="../css/form.css" />
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/footer.css" />
+  </head>
+  <body>
+    <!-- nav -->
+    <nav>
+      <img
+        id="logo"
+        src="https://kfo.edu.vn/wp-content/uploads/2022/11/logo-KFO-darkbg.svg"
+        alt="logo"
+        onclick='() => {window.location.href = "http://127.0.0.1:5500"}'
+      />
+      <div>
+        <ul>
+          <li><a href="#header">DU HOC GLOBAL PATHWAYS</a></li>
+          <li><a href="#about">DICH VU</a></li>
+          <li><a href="#blog">CHIA KHOA DU HOC</a></li>
+          <li>
+            <button
+              id="contact"
+              onclick="() => {window.location.href = './html/form.html'}"
+            >
+              Dang ky tu van
+            </button>
+          </li>
+          <li><i class="fa-solid fa-magnifying-glass"></i></li>
+        </ul>
+      </div>
+    </nav>
+    <!-- main -->
+    <main>
+      <section id="home">
+        <div class="container">
+          <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+              <li
+                data-target="#myCarousel"
+                data-slide-to="0"
+                class="active"
+              ></li>
+              <li data-target="#myCarousel" data-slide-to="1"></li>
+              <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner">
+              <div class="item active">
+                <img src="la.jpg" alt="Los Angeles" style="width: 100%" />
+              </div>
+
+              <div class="item">
+                <img src="chicago.jpg" alt="Chicago" style="width: 100%" />
+              </div>
+
+              <div class="item">
+                <img src="ny.jpg" alt="New york" style="width: 100%" />
+              </div>
+            </div>
+
+            <!-- Left and right controls -->
+            <a
+              class="left carousel-control"
+              href="#myCarousel"
+              data-slide="prev"
+            >
+              <span class="glyphicon glyphicon-chevron-left"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a
+              class="right carousel-control"
+              href="#myCarousel"
+              data-slide="next"
+            >
+              <span class="glyphicon glyphicon-chevron-right"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section id="form">
+        <div class="title">Dang ky tu van</div>
+        <form action="" id="dk_form">
+
+          <div class="part group-2">
+            <div class="title column-span-1">
+              Chọn người đăng ký nhận thông tin
+            </div>
+            <select name="vai_tro" id="vai_tro" class="column-span-1">
+              <option value="phuhuynh">Phu huynh</option>
+              <option value="hocsinh">Hoc sinh</option>
+            </select>
+            <div class="input-group column-span-2">
+              <label for="sdt">Số điện thoại*</label>
+              <input
+                type="text"
+                id="sdt"
+                placeholder="Nhap so dien thoai"
+                required
+              />
+            </div>
+            <div class="input-group column-span-2">
+              <label for="email">Email cá nhân *</label>
+              <input
+                type="email"
+                id="email"
+                placeholder="Nhap email ca nhan"
+                required
+              />
+            </div>
+          </div>
+          <div class="part group-2">
+            <div class="title column-span-1">Thông tin học sinh</div>
+
+            <div class="input-group column-span-2">
+              <label for="ho">Họ và tên lót *</label>
+              <input
+                type="text"
+                id="ho"
+                placeholder="Nhap ho va ten lot"
+                required
+              />
+            </div>
+            <div class="input-group column-span-2">
+              <label for="ten">Tên *</label>
+              <input type="text" id="ten" placeholder="Nhap ten" required />
+            </div>
+            <div class="input-group column-span-2">
+              <label for="ngay-sinh">Ngày sinh *</label>
+              <select name="ngay-sinh" id="ngay-sinh">
+                <option value="ngay">Ngay</option>
+              </select>
+              <select name="thang-sinh" id="thang-sinh">
+                <option value="thang">Thang</option>
+              </select>
+              <select name="nam-sinh" id="nam-sinh">
+                <option value="nam">Nam</option>
+              </select>
+            </div>
+
+            <div class="input-group col-span-2">
+              <label for="gioitinh">Giới tính *</label>
+              <select name="gioitinh" id="gioitinh">
+                <option value="chon gioi tinh">Chon gioi tinh</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="part">
+            <button type="submit" id="submit-btn">Dang ky tu van</button>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <!-- footer -->
+    <footer>
+      <div class="row">
+        <div class="column">
+          <!-- logo -->
+        </div>
+        <div class="column">
+          <!-- social media link -->
+        </div>
+      </div>
+      <div class="row">
+        <div class="column">
+          <p><strong>Van phong tuyen sinh </strong></p>
+        </div>
+        <div class="column"></div>
+        <div class="column"></div>
+        <div class="column"></div>
+      </div>
+
+      <div class="row">
+        <p>Design and Develop by Vu Nguyen</p>
+      </div>
+    </footer>
+
+    <script
+      src="https://kit.fontawesome.com/08c4cc6c98.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="../js/form.js"></script>
+  </body>
+</html>

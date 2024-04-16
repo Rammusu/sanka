@@ -23,14 +23,21 @@
         id="logo"
         src="https://kfo.edu.vn/wp-content/uploads/2022/11/logo-KFO-darkbg.svg"
         alt="logo"
-        onclick='() => {window.location.href = "http://127.0.0.1:5500"}'
+        onclick='() => {document.location.href = "./"}'
       />
       <div>
         <ul>
           <li><a href="#header">DU HOC GLOBAL PATHWAYS</a></li>
           <li><a href="#about">DICH VU</a></li>
           <li><a href="#blog">CHIA KHOA DU HOC</a></li>
-          <li><button id="contact">Dang ky tu van</button></li>
+          <li>
+            <button
+              id="contact"
+              onclick="() => {document.location.href = './html/form.html'}"
+            >
+              Dang ky tu van
+            </button>
+          </li>
           <li><i class="fa-solid fa-magnifying-glass"></i></li>
         </ul>
       </div>
@@ -39,7 +46,6 @@
     <main>
       <section id="home">
         <div class="container">
-          <h2>Carousel Example</h2>
           <div id="myCarousel" class="carousel slide" data-ride="carousel">
             <!-- Indicators -->
             <ol class="carousel-indicators">
@@ -82,7 +88,7 @@
               data-slide="next"
             >
               <span class="glyphicon glyphicon-chevron-right"></span>
-<span class="sr-only">Next</span>
+              <span class="sr-only">Next</span>
             </a>
           </div>
         </div>
@@ -158,7 +164,7 @@
                   <img
                     src="https://kfo.edu.vn/wp-content/uploads/2022/05/kfo-dai-hoc-adelaide-1024x314.png"
                     alt=""
-/>
+                  />
                 </div>
                 <div class="card_header_text">2+2</div>
               </div>
@@ -238,7 +244,7 @@
                     alt=""
                   />
                 </div>
-<div class="card_header_text">2+2</div>
+                <div class="card_header_text">2+2</div>
               </div>
               <div class="card_content">
                 <p>Hoc 1 nam tai UEH-ISB va 2 nam tai Canada</p>
@@ -316,7 +322,7 @@
                 <h1>Năng lực học tập</h1>
                 <p>
                   Chương trình hướng tới việc rèn luyện nội lực, giúp sinh viên
-phát huy tối đa năng lực học tập trong giai đoạn tại Việt Nam
+                  phát huy tối đa năng lực học tập trong giai đoạn tại Việt Nam
                   để có thể đạt kết quả cao nhất khi du học.
                 </p>
               </div>
@@ -401,7 +407,7 @@ phát huy tối đa năng lực học tập trong giai đoạn tại Việt Nam
               <div class="card_header">
                 <div class="card_image">
                   <img
-src="https://kfo.edu.vn/wp-content/uploads/2022/05/kfo-dai-hoc-adelaide-1024x314.png"
+                    src="https://kfo.edu.vn/wp-content/uploads/2022/05/kfo-dai-hoc-adelaide-1024x314.png"
                     alt=""
                   />
                 </div>
@@ -451,11 +457,39 @@ src="https://kfo.edu.vn/wp-content/uploads/2022/05/kfo-dai-hoc-adelaide-1024x314
       </section>
     </main>
     <!-- footer -->
-    <footer></footer>
+    <footer>
+      <div class="row">
+        <div class="column">
+          <!-- logo -->
+        </div>
+        <div class="column">
+          <!-- social media link -->
+        </div>
+      </div>
+      <div class="row">
+        <div class="column">
+          <p><strong>Van phong tuyen sinh </strong></p>
+        </div>
+        <div class="column"></div>
+        <div class="column"></div>
+        <div class="column"></div>
+      </div>
+
+      <div class="row">
+        <p>Design and Develop by Vu Nguyen</p>
+      </div>
+    </footer>
 
     <script
       src="https://kit.fontawesome.com/08c4cc6c98.js"
       crossorigin="anonymous"
     ></script>
+
+    <script>
+      // danh sach mail dang ky tu van (khoi tao)
+      let contact_list = []; 
+      // luu danh sach vao trong local storage
+      localStorage.setItem("contact_list", JSON.stringify(contact_list));
+    </script>
   </body>
 </html>
