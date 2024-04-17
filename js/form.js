@@ -6,7 +6,11 @@ let contact = {
     email: "",
   },
   thong_tin_hs: {
-    ho: "",
+    hovaten: "",
+    ngaysinh: "",
+    gioitinh: "",
+   chungchitienganhdaco: "",
+    
   },
 };
 
@@ -16,20 +20,27 @@ function get_form_data() {
   console.log(contact);
 }
 function validate_form() {
-  if (contact.nguoi_dang_ky.sdt == "" || contact.nguoi_dang_ky.email == "") {
+  if (contact.nguoi_dang_ky.sdt == "" || contact.nguoi_dang_ky.email == "" || contact.nguoi_dang_ky.hovaten == ""  ) 
     alert("Fill the form");
     return true; // form co loi
-  } else if (!contact.nguoi_dang_ky.email.includes("@")) {
+  }  if (!contact.nguoi_dang_ky.email.includes("@")) {
     alert("Email is bad format");
+  }else if (!isNaN(contact.nguoi_dang_ky.sdt)) {
+    alert("please fill number");
+    
     return true;
-  }
+  } 
+  
   return false;
-}
+
 
 document.getElementById("submit-btn").addEventListener("click", (e) => {
   // chan luong mac dinh cua button
   e.preventDefault();
-  if (!validate_form()) {
+  if (!validate_form()) { 
     get_form_data();
   }
 });
+ 
+
+
